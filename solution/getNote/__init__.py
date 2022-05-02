@@ -9,7 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     id = req.params.get('id')
     if id:
         try:
-            url = os.environ["MyDbConnection"] # Change the Variable name, as applicable to you
+            url = os.environ["MyDBConnection"] # Change the Variable name, as applicable to you
             client = pymongo.MongoClient(url)
             database = client['lab2db'] # Change the MongoDB name
             collection = database['notes']    # Change the collection name
